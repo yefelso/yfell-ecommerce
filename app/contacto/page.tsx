@@ -95,9 +95,9 @@ export default function ContactPage() {
             </div>
             <CardTitle className="text-xl">Visítanos</CardTitle>
             <CardDescription>
-              Calle Principal #123
+              Av. José Pardo 231, Miraflores
               <br />
-              Bogotá, Colombia
+              Lima, Perú
             </CardDescription>
           </CardContent>
         </Card>
@@ -203,12 +203,25 @@ export default function ContactPage() {
 
           <div>
             <h2 className="text-2xl font-bold mb-4">Ubicación</h2>
-            <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              {/* Placeholder for map */}
-              <div className="w-full h-full flex items-center justify-center">
-                <MapPin className="h-12 w-12 text-muted-foreground" />
+            <div className="aspect-video bg-muted rounded-lg overflow-hidden relative">
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="bg-primary/20 p-2 rounded-full">
+                  <MapPin className="h-8 w-8 text-primary animate-pulse" />
+                </div>
               </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d982.5130999779913!2d-76.23854828241024!3d-9.929594227933945!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1744478505408!5m2!1ses-419!2spe"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
+            <p className="mt-4 text-center text-muted-foreground">
+              Jr. Dámaso Beraún 860, Huánuco - Perú
+            </p>
           </div>
 
           <div>
